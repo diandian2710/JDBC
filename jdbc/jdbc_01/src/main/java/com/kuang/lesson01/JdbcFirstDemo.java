@@ -23,6 +23,8 @@ public class JdbcFirstDemo {
         //5. 执行SQL的对象 去 执行SQL, 可能存在结果， 查看返回的结果
         String sql = "select * from users";
         ResultSet resultSet = statement.executeQuery(sql);//返回结果集, 结果集中封装了我们全部的查询出来的结果
+//        statement.execute(); execute any sql
+//        statement.executeUpdate(); update, insert, delete -> return update rows
         while (resultSet.next()){
             System.out.println("id = " + resultSet.getObject("id"));
             System.out.println("name = " + resultSet.getObject("NAME"));
